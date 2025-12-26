@@ -10,7 +10,7 @@ theme:
       accent: blue # 链接等可交互元件的高亮色
       # teal
       toggle:
-        icon: material/toggle-switch # 图标
+        icon: material/brightness-7 # 图标
         name: 切换至夜间模式 # 鼠标悬浮提示
     - media: "(prefers-color-scheme: dark)"
       scheme: slate # 夜间模式
@@ -18,5 +18,5 @@ theme:
       accent: indigo
       # teal
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-4
         name: 切换至日间模式
