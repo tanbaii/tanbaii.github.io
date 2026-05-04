@@ -1,22 +1,74 @@
-site_name: Tanbai's Blog
-site_url: https://sxu.tanbai.tech/
+site_name: SXU-HPC 技术文档
+site_url: https://tanbaii.github.io/
 site_author: Tanbai
+
+extra_css:
+  - https://fastly.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
+  - stylesheets/extra.css
+
 theme:
-  name: material #主题
+  name: material
+  font:
+    text: LXGW WenKai
+  language: zh
   palette:
     - media: "(prefers-color-scheme: light)"
-      scheme: default # 日间模式
-      primary: white # 上方的
-      accent: blue # 链接等可交互元件的高亮色
-      # teal
+      scheme: default
+      primary: white
+      accent: blue
       toggle:
-        icon: material/brightness-7 # 图标
-        name: 切换至夜间模式 # 鼠标悬浮提示
+        icon: material/weather-sunny
+        name: 切换至夜间模式
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate # 夜间模式
+      scheme: slate
       primary: black
       accent: indigo
-      # teal
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: 切换至日间模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - 首页: index.md
+  - 赛事相关:
+    - 赛事总览: competitions/index.md
+  - 项目: projects.md
+  - 工具箱:
+    - 工具总览: tools/index.md
+  - 学习资源:
+    - 资源汇总: resources/index.md
+    - 温馨提示与建议: resources/tips.md
+  - 工作与实习: career.md
+
+extra:
+  generator: false
+  analytics:
+    provider: google
+    tracking_id: G-GTK8MPWF1Y
